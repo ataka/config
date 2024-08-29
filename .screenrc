@@ -1,0 +1,4 @@
+escape ^Tt
+markkeys ^b=^Z
+bind c screen zsh
+defscrollback 10000
