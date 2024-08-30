@@ -87,3 +87,15 @@ eval "$(rbenv init - zsh)"
 if [ -f ".zshrc.local" ]; then
   source ".zshrc.local"
 fi
+
+#
+# Memo
+# ==============================================================================
+
+# .authinfo の中身を利用する方法
+#
+# authinfo_github=$(grep 'machine github.com' ~/.authinfo)
+# username_github=$(echo $authinfo_github | awk '{print $4}')
+# password_github=$(echo $authinfo_github | awk '{print $6}')
+#
+# export GITHUB_API_TOKEN=$password_github
