@@ -2,22 +2,29 @@
 #
 # .profile file in Bash
 
-## Prompt
 #
+# General Settings
+# ==============================================================================
+
+#
+# Prompt
+# ------------------------------------------------------------------------------
 export PS1="%~ $ "
 
-## Command Alias
 #
+# Command Alias
+# ------------------------------------------------------------------------------
 alias ls='ls -kFG'
 
-########################################
-#  Customize App
-########################################
-
-# Zsh
 #
+# Customize App
+# ==============================================================================
 
-## Zsh Completion
+#
+# Zsh
+# ------------------------------------------------------------------------------
+
+# ### Zsh Completion
 #
 # $ brew install zsh-completions
 # $ rm -ff ~/.zcompdump; compinit
@@ -28,12 +35,12 @@ if type brew &>/dev/null; then
   compinit
 fi
 
-## Zsh Color
+# ### Zsh Color
 #
 autoload -Uz colors
 colors
 
-## Zsh Prompt
+# ### Zsh Prompt
 #
 # see https://zenn.dev/sprout2000/articles/bd1fac2f3f83bc
 # $ brew install zsh-git-prompt
@@ -57,22 +64,25 @@ precmd() {
   git_prompt
 }
 
-# Emacs
 #
+# Emacs
+# ------------------------------------------------------------------------------
 emacs_dir=$HOME/project/emacs-2024
 alias emacs="open $emacs_dir/nextstep/Emacs.app/"
 export GIT_EDITOR="$emacs_dir/lib-src/emacsclient"
 
+#
 # Rbenv
+# ------------------------------------------------------------------------------
 #
 # $ brew install rbenv
 # $ rbenv install 3.2.2
 export PATH=$HOME/.rbenv/bin:$HOME/bin:$PATH
 eval "$(rbenv init - zsh)"
 
-########################################
+#
 # Local settings
-########################################
+# ==============================================================================
 
 if [ -f ".zshrc.local" ]; then
   source ".zshrc.local"
