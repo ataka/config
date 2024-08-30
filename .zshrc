@@ -33,6 +33,8 @@ export BREW=/opt/homebrew/bin/brew
 #
 # $ brew install zsh-completions
 # $ rm -ff ~/.zcompdump; compinit
+# $ chmod go-w '/opt/homebrew/share'
+# $ chmod -R go-w '/opt/homebrew/share/zsh'
 if type brew &>/dev/null; then
   fpath=(~/.zsh/completions $(brew --prefix)/share/zsh-completions $fpath)
 
@@ -81,7 +83,9 @@ export GIT_EDITOR="$emacs_dir/lib-src/emacsclient"
 # ------------------------------------------------------------------------------
 #
 # $ brew install rbenv
-# $ rbenv install 3.2.2
+# $ rbenv install --list
+# $ rbenv install 3.3.4
+# $ rbenv global  3.3.4
 export PATH=$HOME/.rbenv/bin:$HOME/bin:$PATH
 eval "$(rbenv init - zsh)"
 
