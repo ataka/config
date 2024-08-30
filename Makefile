@@ -3,13 +3,11 @@ INSTALL = cp -p
 
 GITCONFIG = $(HOME)/.gitconfig
 SCREENRC = $(HOME)/.screenrc
-ZSHCONFIG = $(ZPROFILE)
 ZPROFILE = $(HOME)/.zprofile
+ZSHRC    = $(HOME)/.zshrc
 
-INSTALL_CONFIG = $(GITCONFIG) $(SCREENRC) $(ZSHCONFIG)
-
-.PHONY: install
-install: $(INSTALL_CONFIG)
+.PHONY: config
+config: $(ZPROFILE) $(ZSHRC) $(SCREENRC) $(GITCONFIG)
 
 #
 # .gitconfig
@@ -26,7 +24,8 @@ $(SCREENRC): ./.screenrc
 #
 # Zsh config
 #
-$(ZSHCONFIG): $(ZPROFILE)
-
 $(ZPROFILE): ./.zprofile
+	$(INSTALL) $< $@
+
+$(ZSHRC): ./.zshrc
 	$(INSTALL) $< $@
