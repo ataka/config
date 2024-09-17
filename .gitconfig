@@ -1,3 +1,7 @@
 [user]
     name = Masayuki Ataka
     email = masayuki.ataka@gmail.com
+[alias]
+    switchc   = "!SKIP_HOOK=1 git switch"
+    checkoutc = "!SKIP_HOOK=1 git checkout"
+    pullc     = "!SKIP_HOOK=1 git pull"
