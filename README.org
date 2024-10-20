@@ -38,3 +38,21 @@ Mermaid のソースコードから画像等を作成するコマンドライン
 #+begin_src 
 npm install -g @mermaid-js/mermaid-cli
 #+end_src
+
+* フォントの設定
+
+** UDEV Gothic
+
+- https://github.com/yuru7/udev-gothic
+
+BIZ UDGothic と JetBrains Mono を組み合わせたフォント。
+
+JetBrains Mono は Ligature に対応しています。
+
+Nerd Fonts に対応した =UDEVGothic_NF_v2.0.0.zip= をダウンロードしています。
+
+** Victor Mono
+
+- https://rubjo.github.io/victor-mono/
+
+Ligature に対応した英文フォント。
