@@ -39,6 +39,37 @@ Mermaid のソースコードから画像等を作成するコマンドライン
 npm install -g @mermaid-js/mermaid-cli
 #+end_src
 
+** PlantUML
+
+*** plantuml
+
+PlantUML のソースコードから画像等を作成するコマンドラインツール。
+
+**** plantuml のインストール
+
+#+begin_src 
+brew install plantuml
+#+end_src
+
+**** Rakefile のサンプル
+
+次の Rakefile を用意しておくと、ビルドが楽になります。
+
+#+begin_src ruby
+  PLANTUML = "/opt/homebrew/bin/plantuml"
+
+  task :default => :uml
+
+  desc "UML 図を更新する"
+  task :uml => %w[
+    foo.png
+  ]
+
+  rule '.png' => '.plantuml' do |t|
+    sh "#{PLANTUML} #{t.source}"
+  end
+#+end_src
+
 * フォントの設定
 
 ** UDEV Gothic
