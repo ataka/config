@@ -14,16 +14,16 @@ see https://github.com/ataka/emacs-d.git
 
 ** Git
 
-- ~.gitconfig~
+- =.gitconfig=
 
 ** GNU Screen
 
-- ~.screenrc~
+- =.screenrc=
 
 ** zsh
 
-- ~.zshrc~
-- ~.zprofile~
+- =.zshrc=
+- =.zprofile=
 
 * プログラミング言語の設定
 
