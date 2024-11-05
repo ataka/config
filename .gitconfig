@@ -5,3 +5,5 @@
     switchn   = "!SKIP_HOOK=1 git switch"
     checkoutn = "!SKIP_HOOK=1 git checkout"
     pulln     = "!SKIP_HOOK=1 git pull"
+[pull]
+	rebase = false
