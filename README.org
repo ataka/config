@@ -25,6 +25,34 @@ see https://github.com/ataka/emacs-d.git
 - =.zshrc=
 - =.zprofile=
 
+*** zsh (homebrew 版)
+
+#+begin_src
+  brew install zsh
+#+end_src
+
+**** zsh (homebrew 版) の設定
+
+=/etc/shells= に次の行を追加します。
+
+#+begin_src
+  /opt/homebrew/bin/zsh
+#+end_src
+
+その後、ログイン・シェルの変更を実施します。
+
+#+begin_src
+  chsh -s /opt/homebrew/bin/zsh
+#+end_src
+
+*** oh my posh
+
+**** oh my posh のインストール
+
+#+begin_src
+  brew install jandedobbeleer/oh-my-posh/oh-my-posh
+#+end_src
+
 * プログラミング言語の設定
 
 ** Mermaid

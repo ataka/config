@@ -47,29 +47,37 @@ fi
 autoload -Uz colors
 colors
 
-# ### Zsh Prompt
+# ### Zsh Prompt for Apple Terminal
 #
 # see https://zenn.dev/sprout2000/articles/bd1fac2f3f83bc
 # $ brew install zsh-git-prompt
-alias python="python3"
-if [ -f "$(brew --prefix zsh-git-prompt)/zshrc.sh" ]; then
-  GIT_PROMPT_THEME=Default
-  source "$(brew --prefix zsh-git-prompt)/zshrc.sh"
+if [ "$TERM_PROGRAM" = "Apple_Termanil" ]; then
+  alias python="python3"
+  if [ -f "$(brew --prefix zsh-git-prompt)/zshrc.sh" ]; then
+    GIT_PROMPT_THEME=Default
+    source "$(brew --prefix zsh-git-prompt)/zshrc.sh"
+  fi
+
+  git_prompt() {
+    # $'\n' で改行
+    # see https://qiita.com/ko1nksm/items/af780da4a8ef8b1c5beb
+    if [ "$(git rev-parse --is-inside-work-tree 2> /dev/null)" = true ]; then
+      PROMPT='%B%~%b$(git_super_status)'$'\n''%F{white}[%T]%f %(!.#.$) '
+    else
+      PROMPT='%B%~%b'$'\n''%F{white}[%T]%f %(!.#.$) '
+    fi
+  }
+
+  precmd() {
+    git_prompt
+  }
 fi
 
-git_prompt() {
-  # $'\n' で改行
-  # see https://qiita.com/ko1nksm/items/af780da4a8ef8b1c5beb
-  if [ "$(git rev-parse --is-inside-work-tree 2> /dev/null)" = true ]; then
-    PROMPT='%B%~%b$(git_super_status)'$'\n''%F{white}[%T]%f %(!.#.$) '
-  else
-    PROMPT='%B%~%b'$'\n''%F{white}[%T]%f %(!.#.$) '
-  fi
-}
+# ### oh my posh
 
-precmd() {
-  git_prompt
-}
+if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
+  eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/powerlevel10k_rainbow.omp.json)"
+fi
 
 #
 # Emacs
