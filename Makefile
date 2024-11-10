@@ -1,31 +1,12 @@
 # -*- mode: makefile-gmake -*-
-INSTALL = cp -p
 
-GITCONFIG = $(HOME)/.gitconfig
-SCREENRC = $(HOME)/.screenrc
-ZPROFILE = $(HOME)/.zprofile
-ZSHRC    = $(HOME)/.zshrc
+.PHONY: all
+all: link
 
-.PHONY: config
-config: $(ZPROFILE) $(ZSHRC) $(SCREENRC) $(GITCONFIG)
+.PHONY: link
+link:
+	./link.sh
 
-#
-# .gitconfig
-#
-$(GITCONFIG): ./.gitconfig
-	$(INSTALL) $< $@
-
-#
-# .screenrc
-#
-$(SCREENRC): ./.screenrc
-	$(INSTALL) $< $@
-
-#
-# Zsh config
-#
-$(ZPROFILE): ./.zprofile
-	$(INSTALL) $< $@
-
-$(ZSHRC): ./.zshrc
-	$(INSTALL) $< $@
+.PHONY: setup
+setup:
+	brew install stow
