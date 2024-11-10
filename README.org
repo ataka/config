@@ -20,6 +20,14 @@ Better =ls=
   brew install eza
 #+end_src
 
+** fzf
+
+=zoxide= との連携で力を発揮する Fazzy Finder
+
+#+begin_src
+  brew install fzf
+#+end_src
+
 ** Git
 
 - =.gitconfig=

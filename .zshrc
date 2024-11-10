@@ -137,6 +137,15 @@ if type zoxide &>/dev/null; then
 fi
 
 #
+# fzf
+#
+# brew install fzf
+
+if type fzf &>/dev/null; then
+  source <(fzf --zsh)
+fi
+
+#
 # Local settings
 # ==============================================================================
 
