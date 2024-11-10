@@ -16,24 +16,26 @@ export PS1="%~ $ "
 # ------------------------------------------------------------------------------
 
 #
-# Customize App
+# Customize Zsh
 # ==============================================================================
 
-#
-# Homebrew
-# ------------------------------------------------------------------------------
-export BREW=/opt/homebrew/bin/brew
 
 #
-# Zsh
+# Zsh Color
 # ------------------------------------------------------------------------------
 
-# ### Zsh Completion
+autoload -Uz colors
+colors
+
+#
+# Zsh Completion
+# ------------------------------------------------------------------------------
 #
 # $ brew install zsh-completions
 # $ rm -ff ~/.zcompdump; compinit
 # $ chmod go-w '/opt/homebrew/share'
 # $ chmod -R go-w '/opt/homebrew/share/zsh'
+
 if type brew &>/dev/null; then
   fpath=(~/.zsh/completions $(brew --prefix)/share/zsh-completions $fpath)
 
@@ -41,10 +43,7 @@ if type brew &>/dev/null; then
   compinit
 fi
 
-# ### Zsh Color
 #
-autoload -Uz colors
-colors
 # Zsh autosuggestion
 # ------------------------------------------------------------------------------
 #
@@ -60,7 +59,9 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
-# ### Zsh Prompt for Apple Terminal
+#
+# Zsh Prompt for Apple Terminal
+# ------------------------------------------------------------------------------
 #
 # see https://zenn.dev/sprout2000/articles/bd1fac2f3f83bc
 # $ brew install zsh-git-prompt
@@ -86,11 +87,17 @@ if [ "$TERM_PROGRAM" = "Apple_Termanil" ]; then
   }
 fi
 
-# ### oh my posh
+#
+# oh my posh
+# ------------------------------------------------------------------------------
 
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh --config $(brew --prefix oh-my-posh)/themes/powerlevel10k_rainbow.omp.json)"
 fi
+
+#
+# Customize App
+# ==============================================================================
 
 #
 # Emacs
@@ -114,6 +121,11 @@ else
   alias ls='ls -kFG'
   alias lt='tree'
 fi
+
+#
+# Homebrew
+# ------------------------------------------------------------------------------
+export BREW=/opt/homebrew/bin/brew
 
 #
 # Rbenv
