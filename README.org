@@ -36,6 +36,19 @@ Better =ls=
 
 - =.screenrc=
 
+** WezTerm
+
+*** WezTerm のインストール
+
+#+begin_src
+  brew install --cask wezterm
+#+end_src
+
+*** WezTerm の使い方
+
+- =Cmd + T= タブを新しく作る
+- =Cmd + W= タブを閉じる
+
 ** zoxide
 
 Better =cd=
