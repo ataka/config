@@ -112,6 +112,16 @@ export PATH=$HOME/.rbenv/bin:$HOME/bin:$PATH
 eval "$(rbenv init - zsh)"
 
 #
+# Zoxide -- Better cd
+# ------------------------------------------------------------------------------
+#
+# brew install zoxcide
+
+if type zoxide &>/dev/null; then
+  eval "$(zoxide init --cmd cd zsh)"
+fi
+
+#
 # Local settings
 # ==============================================================================
 

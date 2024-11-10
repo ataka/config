@@ -20,6 +20,14 @@ see https://github.com/ataka/emacs-d.git
 
 - =.screenrc=
 
+** zoxide
+
+Better =cd=
+
+#+begin_src
+  brew install zoxide
+#+end_src
+
 ** zsh
 
 - =.zshrc=
