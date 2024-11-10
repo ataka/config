@@ -11,15 +11,34 @@ link:
 setup:
 	brew install stow
 
+#
+# Install
+# ============================================================
+
 .PHONY: install
-install:
-	brew install jandedobbeleer/oh-my-posh/oh-my-posh
-	brew install zsh
-	brew install zsh-completion
-	brew install zsh-autosuggestions
-	brew install zsh-syntax-highlighting
+install: install-cui install-programming
+
+.PHONE: install-cui
+install-cui:
+	brew install --cask wezterm
+	brew install --formula jandedobbeleer/oh-my-posh/oh-my-posh
+	brew install bat
 	brew install eza
 	brew install fzf
+	brew install screen
+	brew install tmux
 	brew install tree
 	brew install zoxide
-	brew install --cask wezterm
+	brew install zsh
+	brew install zsh-autosuggestions
+	brew install zsh-completion
+	brew install zsh-syntax-highlighting
+
+.PHONY: install-programming
+install-programming: install-programming-bash
+	brew install lua
+	brew install plantuml
+
+.PHONY: install-programming-bash
+install-programming-bash:
+	brew install bash-language-server
