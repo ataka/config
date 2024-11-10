@@ -149,8 +149,8 @@ fi
 # Local settings
 # ==============================================================================
 
-if [ -f ".zshrc.local" ]; then
-  source ".zshrc.local"
+if [ -f $HOME/.zshrc.local ]; then
+  source $HOME/.zshrc.local
 fi
 
 #
