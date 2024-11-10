@@ -12,6 +12,14 @@
 
 see https://github.com/ataka/emacs-d.git
 
+** Eza
+
+Better =ls=
+
+#+begin_src
+  brew install eza
+#+end_src
+
 ** Git
 
 - =.gitconfig=

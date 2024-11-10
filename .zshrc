@@ -14,7 +14,6 @@ export PS1="%~ $ "
 #
 # Command Alias
 # ------------------------------------------------------------------------------
-alias ls='ls -kFG'
 
 #
 # Customize App
@@ -99,6 +98,22 @@ fi
 emacs_dir=$HOME/project/emacs-2024
 alias emacs="open $emacs_dir/nextstep/Emacs.app/"
 export GIT_EDITOR="$emacs_dir/lib-src/emacsclient"
+
+#
+# Eza -- Better ls
+# ------------------------------------------------------------------------------
+#
+# brew install eza
+# brew install tree
+
+if [ -f "/opt/homebrew/bin/eza" ]; then
+  alias ls='eza --git-ignore --icons --no-user'
+  alias lt='eza --git-ignore --icons --no-user --tree '
+  alias lt3='eza --git-ignore --icons --no-user --tree --level=3'
+else
+  alias ls='ls -kFG'
+  alias lt='tree'
+fi
 
 #
 # Rbenv
