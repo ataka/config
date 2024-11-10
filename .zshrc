@@ -46,6 +46,13 @@ fi
 #
 autoload -Uz colors
 colors
+# Zsh autosuggestion
+# ------------------------------------------------------------------------------
+#
+# $ brew install zsh-autosuggestions
+
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
 
 # ### Zsh Prompt for Apple Terminal
 #
