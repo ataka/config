@@ -36,6 +36,14 @@ Better =ls=
 
 - =.screenrc=
 
+** oh my posh
+
+*** oh my posh のインストール
+
+#+begin_src
+  brew install jandedobbeleer/oh-my-posh/oh-my-posh
+#+end_src
+
 ** WezTerm
 
 *** WezTerm のインストール
@@ -80,14 +88,6 @@ Better =cd=
 
 #+begin_src
   chsh -s /opt/homebrew/bin/zsh
-#+end_src
-
-*** oh my posh
-
-**** oh my posh のインストール
-
-#+begin_src
-  brew install jandedobbeleer/oh-my-posh/oh-my-posh
 #+end_src
 
 * プログラミング言語の設定
