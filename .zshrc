@@ -53,6 +53,13 @@ colors
 
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+#
+# Zsh syntax highlighting
+# ------------------------------------------------------------------------------
+#
+# $ brew install zsh-syntax-highlighting
+
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # ### Zsh Prompt for Apple Terminal
 #
