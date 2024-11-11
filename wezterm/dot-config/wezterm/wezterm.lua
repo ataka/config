@@ -89,5 +89,13 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
   }
 end)
 
+-- キー設定を読み込む
+-- ============================================================
+config.keys = require("keybinds").keys
+config.key_tables = require("keybinds").key_tables
+
+-- デフォルトのキーバインドを無効にする
+config.disable_default_key_bindings = true
+
 -- Return configuration
 return config
