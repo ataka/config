@@ -17,6 +17,12 @@ return {
         end),
       },
     },
+    -- Pane 分割
+    { key = '|', mods = 'LEADER', action = act.SplitHorizontal{ domain = 'CurrentPaneDomain' } },
+    { key = '-', mods = 'LEADER', action = act.SplitVertical{ domain = 'CurrentPaneDomain' } },
+    { key = 'x', mods = 'LEADER', action = act({ CloseCurrentPane = { confirm = true } }) },
+    { key = 'o', mods = 'LEADER', action = act.ActivatePaneDirection('Next') },
+    { key = 'o', mods = 'LEADER|SHIFT', action = act.ActivatePaneDirection('Prev') },
     -- オリジナル設定
     { key = 'Tab', mods = 'CTRL', action = act.ActivateTabRelative(1) },
     { key = 'Tab', mods = 'SHIFT|CTRL', action = act.ActivateTabRelative(-1) },
