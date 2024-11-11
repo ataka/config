@@ -3,6 +3,21 @@ local act = wezterm.action
 
 return {
   keys = {
+    -- カスタム設定
+    {
+      -- タブの名前変更
+      key = 'e',
+      mods = 'LEADER',
+      action = act.PromptInputLine {
+        description = 'Enter new name for tab',
+        action = wezterm.action_callback(function(window, pane, line)
+          if line then
+            window:active_tab():set_title(line)
+          end
+        end),
+      },
+    },
+    -- オリジナル設定
     { key = 'Tab', mods = 'CTRL', action = act.ActivateTabRelative(1) },
     { key = 'Tab', mods = 'SHIFT|CTRL', action = act.ActivateTabRelative(-1) },
     { key = 'Enter', mods = 'ALT', action = act.ToggleFullScreen },
