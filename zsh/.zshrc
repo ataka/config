@@ -114,8 +114,8 @@ export GIT_EDITOR="$emacs_dir/lib-src/emacsclient"
 # brew install tree
 
 if [ -f "/opt/homebrew/bin/eza" ]; then
-  alias ls='eza --git-ignore --icons --no-user'
-  alias lt='eza --git-ignore --icons --no-user --tree '
+  alias ls='eza --icons --no-user'
+  alias lt='eza --icons --no-user --tree '
   alias lt3='eza --git-ignore --icons --no-user --tree --level=3'
 else
   alias ls='ls -kFG'
