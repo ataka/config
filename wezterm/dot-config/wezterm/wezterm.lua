@@ -97,5 +97,8 @@ config.key_tables = require("keybinds").key_tables
 -- デフォルトのキーバインドを無効にする
 config.disable_default_key_bindings = true
 
+-- Leaderキーを設定する
+config.leader = { key = "q", mods = "CTRL", timeout_milliseconds = 2000 }
+
 -- Return configuration
 return config
