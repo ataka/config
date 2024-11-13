@@ -27,6 +27,8 @@ export PS1="%~ $ "
 autoload -Uz colors
 colors
 
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+
 #
 # Zsh Completion
 # ------------------------------------------------------------------------------
