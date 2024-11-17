@@ -1,0 +1,92 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format="""
+[](bg:bg_start fg:bg_os)\
+$os\
+[](fg:bg_os bg:bg_directory)\
+$directory\
+[](fg:bg_directory bg:bg_git)\
+$git_branch\
+$git_commit\
+$git_state\
+$git_metrics\
+$git_status\
+[](fg:bg_git bg:bg_start)\
+$fill\
+$lua\
+$ruby\
+$swift\
+$status\
+$time\
+$cmd_duration\
+$line_break\
+$character\
+"""
+
+palette = "wang"
+
+[palettes.wang]
+bgstart = '#030B16'
+bg_os = '#7DF9AA'
+fg_os = '#090c0c'
+bg_directory = '#3B76F0'
+fg_directory = '#E4E4E4'
+bg_git = '#FCF392'
+fg_git = '#1C3A5E'
+
+[fill]
+symbol = " "
+
+[os]
+disabled = false
+style = "fg:fg_os bg:bg_os"
+
+  [os.symbols]
+  Macos = "󰀵  "
+
+[directory]
+truncation_length = 6
+truncate_to_repo = false
+format = '[   $path ]($style)[$read_only]($read_only_style)'
+style = "bold fg:fg_directory bg:bg_directory"
+
+[git_branch]
+format = '[ $symbol$branch(:$remote_branch) ]($style)'
+symbol = '󰊤    '
+style = "bold fg:fg_git bg:bg_git"
+
+[git_commit]
+style = "bold fg:fg_git bg:bg_git"
+
+[git_metrics]
+disabled = false
+added_style = "bold fg:green bg:bg_git"
+deleted_style = "bold fg:red bg:bg_git"
+
+[git_status]
+format = '([$ahead_behind$all_status ]($style))'
+ahead = '  ${count}'
+diverged = '   ${ahead_count}  ${behind_count}'
+behind = '  ${count}'
+stashed = '   ${count}'
+style = "bold fg:fg_git bg:bg_git"
+
+[ruby]
+format = '[$symbol($version )]($style) '
+style = 'fg:white bg:red bold'
+
+[swift]
+format = '[$symbol($version )]($style)'
+
+[status]
+disabled = false
+format = '[$symbol]($style) '
+success_symbol = ' '
+style = 'fg:white bg:black bold'
+
+[time]
+disabled = false
+format = '[$time 󱑓 ]($style)'
+
+[cmd_duration]
+format = '[$duration 󱦟 ]($style)'

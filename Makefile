@@ -27,6 +27,7 @@ install-cui:
 	brew install fd
 	brew install fzf
 	brew install screen
+	brew install starship
 	brew install tmux
 	brew install tree
 	brew install zoxide
