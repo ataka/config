@@ -42,13 +42,56 @@ disabled = false
 style = "fg:fg_os bg:bg_os"
 
   [os.symbols]
-  Macos = "󰀵  "
+  Alpaquita = "  "
+  Alpine = "  "
+  AlmaLinux = "  "
+  Amazon = "  "
+  Android = "  "
+  Arch = "  "
+  Artix = "  "
+  CentOS = "  "
+  Debian = "  "
+  DragonFly = "  "
+  Emscripten = "  "
+  EndeavourOS = "  "
+  Fedora = "  "
+  FreeBSD = "  "
+  Garuda = "󰛓  "
+  Gentoo = "  "
+  HardenedBSD = "󰞌  "
+  Illumos = "󰈸  "
+  Kali = "  "
+  Linux = "  "
+  Mabox = "  "
+  Macos = "  "
+  Manjaro = "  "
+  Mariner = "  "
+  MidnightBSD = "  "
+  Mint = "  "
+  NetBSD = "  "
+  NixOS = "  "
+  OpenBSD = "󰈺  "
+  openSUSE = "  "
+  OracleLinux = "󰌷  "
+  Pop = "  "
+  Raspbian = "  "
+  Redhat = "  "
+  RedHatEnterprise = "  "
+  RockyLinux = "  "
+  Redox = "󰀘  "
+  Solus = "󰠳  "
+  SUSE = "  "
+  Ubuntu = "  "
+  Unknown = "  "
+  Void = "  "
+  Windows = "󰍲  "
 
 [directory]
 truncation_length = 6
 truncate_to_repo = false
 format = '[   $path ]($style)[$read_only]($read_only_style)'
 style = "bold fg:fg_directory bg:bg_directory"
+read_only = " 󰌾 "
 
 [git_branch]
 format = '[ $symbol$branch(:$remote_branch) ]($style)'
@@ -57,6 +100,7 @@ style = "bold fg:fg_git bg:bg_git"
 
 [git_commit]
 style = "bold fg:fg_git bg:bg_git"
+tag_symbol = '   '
 
 [git_metrics]
 disabled = false
@@ -74,9 +118,12 @@ style = "bold fg:fg_git bg:bg_git"
 [ruby]
 format = '[$symbol($version )]($style) '
 style = 'fg:white bg:red bold'
+symbol = "   "
 
 [swift]
 format = '[$symbol($version )]($style)'
+symbol = "   "
+
 
 [status]
 disabled = false
@@ -113,8 +160,8 @@ symbol = " "
 [dart]
 symbol = " "
 
-[directory]
-read_only = " 󰌾"
+# [directory]
+# read_only = " 󰌾"
 
 [docker_context]
 symbol = " "
@@ -131,11 +178,11 @@ symbol = " "
 [fossil_branch]
 symbol = " "
 
-[git_branch]
-symbol = " "
+# [git_branch]
+# symbol = " "
 
-[git_commit]
-tag_symbol = '  '
+# [git_commit]
+# tag_symbol = '  '
 
 [golang]
 symbol = " "
@@ -185,50 +232,50 @@ symbol = " "
 [ocaml]
 symbol = " "
 
-[os.symbols]
-Alpaquita = " "
-Alpine = " "
-AlmaLinux = " "
-Amazon = " "
-Android = " "
-Arch = " "
-Artix = " "
-CentOS = " "
-Debian = " "
-DragonFly = " "
-Emscripten = " "
-EndeavourOS = " "
-Fedora = " "
-FreeBSD = " "
-Garuda = "󰛓 "
-Gentoo = " "
-HardenedBSD = "󰞌 "
-Illumos = "󰈸 "
-Kali = " "
-Linux = " "
-Mabox = " "
-Macos = " "
-Manjaro = " "
-Mariner = " "
-MidnightBSD = " "
-Mint = " "
-NetBSD = " "
-NixOS = " "
-OpenBSD = "󰈺 "
-openSUSE = " "
-OracleLinux = "󰌷 "
-Pop = " "
-Raspbian = " "
-Redhat = " "
-RedHatEnterprise = " "
-RockyLinux = " "
-Redox = "󰀘 "
-Solus = "󰠳 "
-SUSE = " "
-Ubuntu = " "
-Unknown = " "
-Void = " "
-Windows = "󰍲 "
+# [os.symbols]
+# Alpaquita = " "
+# Alpine = " "
+# AlmaLinux = " "
+# Amazon = " "
+# Android = " "
+# Arch = " "
+# Artix = " "
+# CentOS = " "
+# Debian = " "
+# DragonFly = " "
+# Emscripten = " "
+# EndeavourOS = " "
+# Fedora = " "
+# FreeBSD = " "
+# Garuda = "󰛓 "
+# Gentoo = " "
+# HardenedBSD = "󰞌 "
+# Illumos = "󰈸 "
+# Kali = " "
+# Linux = " "
+# Mabox = " "
+# Macos = " "
+# Manjaro = " "
+# Mariner = " "
+# MidnightBSD = " "
+# Mint = " "
+# NetBSD = " "
+# NixOS = " "
+# OpenBSD = "󰈺 "
+# openSUSE = " "
+# OracleLinux = "󰌷 "
+# Pop = " "
+# Raspbian = " "
+# Redhat = " "
+# RedHatEnterprise = " "
+# RockyLinux = " "
+# Redox = "󰀘 "
+# Solus = "󰠳 "
+# SUSE = " "
+# Ubuntu = " "
+# Unknown = " "
+# Void = " "
+# Windows = "󰍲 "
 
 [package]
 symbol = "󰏗 "
@@ -248,8 +295,8 @@ symbol = " "
 [rlang]
 symbol = "󰟔 "
 
-[ruby]
-symbol = " "
+# [ruby]
+# symbol = " "
 
 [rust]
 symbol = "󱘗 "
@@ -257,8 +304,8 @@ symbol = "󱘗 "
 [scala]
 symbol = " "
 
-[swift]
-symbol = " "
+# [swift]
+# symbol = " "
 
 [zig]
 symbol = " "
