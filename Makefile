@@ -24,6 +24,7 @@ install-cui:
 	brew install --formula jandedobbeleer/oh-my-posh/oh-my-posh
 	brew install bat
 	brew install eza
+	brew install fd
 	brew install fzf
 	brew install screen
 	brew install tmux
