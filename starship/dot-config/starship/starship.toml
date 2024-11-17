@@ -1,7 +1,7 @@
 "$schema" = 'https://starship.rs/config-schema.json'
 
 format="""
-[](bg:bg_start fg:bg_os)\
+[](fg:bg_os)\
 $os\
 [](fg:bg_os bg:bg_directory)\
 $directory\
@@ -11,7 +11,7 @@ $git_commit\
 $git_state\
 $git_metrics\
 $git_status\
-[](fg:bg_git bg:bg_start)\
+[](fg:bg_git)\
 $fill\
 $lua\
 $ruby\
@@ -26,7 +26,6 @@ $character\
 palette = "wang"
 
 [palettes.wang]
-bgstart = '#030B16'
 bg_os = '#7DF9AA'
 fg_os = '#090c0c'
 bg_directory = '#3B76F0'
