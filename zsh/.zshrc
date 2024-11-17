@@ -168,9 +168,15 @@ if type fzf &>/dev/null; then
          --color header:italic
          --header 'Press CTRL-Y to copy command into clipboard'"
 
-  export FZF_ALT_C_OPTS="
-         --walker-skip .git,node_modules,target
-         --preview 'tree -C {}'"
+  if type eza &>/dev/null; then
+    export FZF_ALT_C_OPTS="
+           --walker-skip .git,node_modules,target
+           --preview 'eza --color=always --git-ignore --icons --no-user --tree {}'"
+  elif type tree &>/dev/null; then
+    export FZF_ALT_C_OPTS="
+           --walker-skip .git,node_modules,target
+           --preview 'tree -C {}'"
+  fi
 fi
 
 #
