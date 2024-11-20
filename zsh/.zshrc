@@ -143,7 +143,10 @@ fi
 
 function git-preview-branch() {
   git branch | \
-    fzf --preview="echo {} | sed -e 's/^.//' | xargs git log --graph --color=always --format=format:'%C(cyan)%ar %C(yellow)%an %C(white)%s'" | \
+    fzf --height 60% \
+        --preview="echo {} | \
+                   sed -e 's/^.//' | \
+                   xargs git log --graph --color=always --format=format:'%C(cyan)%ar %C(yellow)%an %C(white)%s'" | \
     sed -e 's/^.//'
 }
 
