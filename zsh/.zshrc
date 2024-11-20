@@ -147,6 +147,16 @@ function git-preview-branch() {
     sed -e 's/^.//'
 }
 
+function git-preview-worktree() {
+  git worktree list | \
+    fzf --height 60% \
+        --bind 'ctrl-/:change-preview-window(down|hidden|)' \
+        --preview="echo {3} | \
+                   sed -E 's/\[(.+)\]/\1/' | \
+                   xargs git log --graph --color=always --format=format:'%C(cyan)%ar %C(yellow)%an %C(white)%s'" | \
+    awk '{print $1}'
+}
+
 #
 # Homebrew
 # ------------------------------------------------------------------------------
