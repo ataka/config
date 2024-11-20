@@ -26,6 +26,7 @@ install-cui:
 	brew install eza
 	brew install fd
 	brew install fzf
+	brew install git-delta
 	brew install screen
 	brew install starship
 	brew install tmux
