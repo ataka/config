@@ -12,5 +12,7 @@
 [pull]
 	rebase = false
 [delta]
-    line-numbers = true
+    features = line-numbers
     navigate = true
+[delta "magit-delta"]
+    line-numbers = false
