@@ -92,6 +92,14 @@ format = '[   $path ]($style)[$read_only]($read_only_style)'
 style = "bold fg:fg_directory bg:bg_directory"
 read_only = " 󰌾 "
 
+  [directory.substitutions]
+  "Documents" = "󰈙  "
+  "Downloads" = "  "
+  "Music" = "  "
+  "Pictures" = "  "
+  "Logseq" = "󱔘 "
+  "project" = " "
+
 [git_branch]
 format = '[ $symbol$branch(:$remote_branch) ]($style)'
 symbol = '󰊤    '
