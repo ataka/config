@@ -8,22 +8,29 @@ $directory\
 [](fg:bg_directory bg:bg_git)\
 $git_branch\
 $git_commit\
+[](fg:bg_git bg:bg_git_2)\
 $git_state\
 $git_metrics\
 $git_status\
-[](fg:bg_git)\
+[](fg:bg_git_2)\
 $fill\
+[](fg:bg_lang)\
 $lua\
 $ruby\
 $swift\
-$status\
-$time\
+[](fg:bg_duration bg:bg_lang)\
 $cmd_duration\
+[](fg:bg_time bg:bg_duration)\
+$time\
+[](fg:bg_check bg:bg_time)\
+[ ](bg:bg_check)\
+$status\
+[](fg:bg_check)\
 $line_break\
 $character\
 """
 
-palette = "wang"
+palette = "catppuccin_frappe"
 
 [palettes.wang]
 bg_os = '#7DF9AA'
@@ -111,8 +118,9 @@ tag_symbol = '   '
 
 [git_metrics]
 disabled = false
-added_style = "bold fg:green bg:bg_git"
-deleted_style = "bold fg:red bg:bg_git"
+format = '([ +$added ]($added_style))([-$deleted ]($deleted_style))'
+added_style = "bold fg:crust bg:bg_git_2"
+deleted_style = "bold fg:crust bg:bg_git_2"
 
 [git_status]
 format = '([$ahead_behind$all_status ]($style))'
@@ -120,30 +128,36 @@ ahead = '  ${count}'
 diverged = '   ${ahead_count}  ${behind_count}'
 behind = '  ${count}'
 stashed = '   ${count}'
-style = "bold fg:fg_git bg:bg_git"
+style = "bold fg:fg_git_2 bg:bg_git_2"
+
+[lua]
+format = '[$symbol($version )]($style)'
+style = 'fg:fg_lang bg:bg_lang'
+symbol = " "
 
 [ruby]
-format = '[$symbol($version )]($style) '
-style = 'fg:white bg:red bold'
+format = '[$symbol($version )]($style)'
+style = 'fg:fg_lang bg:bg_lang'
 symbol = "   "
 
 [swift]
 format = '[$symbol($version )]($style)'
+style = 'fg:fg_lang bg:bg_lang'
 symbol = "   "
 
-
-[status]
-disabled = false
-format = '[$symbol]($style) '
-success_symbol = ' '
-style = 'fg:white bg:black bold'
+[cmd_duration]
+format = '[ $duration 󱦟  ]($style)'
+style = 'fg:fg_duration bg:bg_duration'
 
 [time]
 disabled = false
-format = '[$time 󱑓 ]($style)'
+format = '[ $time 󱑓  ]($style)'
+style = 'fg:fg_time bg:bg_time'
 
-[cmd_duration]
-format = ' [/](white) [$duration 󱦟 ]($style)'
+[status]
+disabled = false
+format = '[$symbol$status ]($style)'
+style = 'fg:fg_check bg:bg_check'
 
 # Copied from Ned Font Symbols preset
 # ==============================================================================
@@ -218,8 +232,8 @@ symbol = " "
 [kotlin]
 symbol = " "
 
-[lua]
-symbol = " "
+# [lua]
+# symbol = " "
 
 [memory_usage]
 symbol = "󰍛 "
@@ -319,3 +333,182 @@ symbol = " "
 
 [gradle]
 symbol = " "
+
+# Catppuccin
+# ==============================================================================
+# https://github.com/catppuccin/starship
+
+[palettes.catppuccin_latte]
+bg_os = "#8839ef" # mauve
+fg_os = "#11111b" # crust
+bg_directory = "#7287fd" # lavender
+fg_directory = "#11111b" # crust
+bg_git = "#209fb5" # sapphire
+fg_git = "#11111b" # crust
+bg_git_2 = "#04a5e5" # sky
+fg_git_2 = "#40a02b" # green
+fg_lang = "#11111b" # crust
+bg_duration = "#df8e1d" # yellow
+fg_duration = "#11111b" # crust
+bg_time = "#fe640b" # peach
+fg_time = "#11111b" # crust
+bg_check = "#d20f39" # red
+fg_check = "#11111b" # crust
+rosewater = "#dc8a78"
+flamingo = "#dd7878"
+pink = "#ea76cb"
+mauve = "#8839ef"
+red = "#d20f39"
+maroon = "#e64553"
+peach = "#fe640b"
+yellow = "#df8e1d"
+green = "#40a02b"
+teal = "#179299"
+sky = "#04a5e5"
+sapphire = "#209fb5"
+blue = "#1e66f5"
+lavender = "#7287fd"
+text = "#4c4f69"
+subtext1 = "#5c5f77"
+subtext0 = "#6c6f85"
+overlay2 = "#7c7f93"
+overlay1 = "#8c8fa1"
+overlay0 = "#9ca0b0"
+surface2 = "#acb0be"
+surface1 = "#bcc0cc"
+surface0 = "#ccd0da"
+base = "#eff1f5"
+mantle = "#e6e9ef"
+crust = "#dce0e8"
+
+[palettes.catppuccin_frappe]
+bg_os = "#ca9ee6" # mauve
+fg_os = "#11111b" # crust
+bg_directory = "#babbf1" # lavender
+fg_directory = "#11111b" # crust
+bg_git = "#85c1dc" # sapphire
+fg_git = "#11111b" # crust
+bg_git_2 = "#99d1db" # sky
+fg_git_2 = "#11111b" # crust
+bg_lang = "#a6d189" # green
+fg_lang = "#11111b" # crust
+bg_duration = "#e5c890" # yellow
+fg_duration = "#11111b" # crust
+bg_time = "#ef9f76" # peach
+fg_time = "#11111b" # crust
+bg_check = "#e78284" # red
+fg_check = "#11111b" # crust
+rosewater = "#f2d5cf"
+flamingo = "#eebebe"
+pink = "#f4b8e4"
+mauve = "#ca9ee6"
+red = "#e78284"
+maroon = "#ea999c"
+peach = "#ef9f76"
+yellow = "#e5c890"
+green = "#a6d189"
+teal = "#81c8be"
+sky = "#99d1db"
+sapphire = "#85c1dc"
+blue = "#8caaee"
+lavender = "#babbf1"
+text = "#c6d0f5"
+subtext1 = "#b5bfe2"
+subtext0 = "#a5adce"
+overlay2 = "#949cbb"
+overlay1 = "#838ba7"
+overlay0 = "#737994"
+surface2 = "#626880"
+surface1 = "#51576d"
+surface0 = "#414559"
+base = "#303446"
+mantle = "#292c3c"
+crust = "#232634"
+
+[palettes.catppuccin_macchiato]
+bg_os = "#c6a0f6" # mauve
+fg_os = "#11111b" # crust
+bg_directory = "#b7bdf8" # lavender
+fg_directory = "#11111b" # crust
+bg_git = "#7dc4e4" # sapphire
+fg_git = "#11111b" # crust
+bg_git_2 = "#91d7e3" # sky
+fg_git_2 = "#11111b" # crust
+bg_lang = "#a6da95" # green
+fg_lang = "#11111b" # crust
+bg_duration = "#eed49f" # yellow
+fg_duration = "#11111b" # crust
+bg_time = "#f5a97f" # peach
+fg_time = "#11111b" # crust
+bg_check = "#ed8796" # red
+fg_check = "#11111b" # crust
+rosewater = "#f4dbd6"
+flamingo = "#f0c6c6"
+pink = "#f5bde6"
+mauve = "#c6a0f6"
+red = "#ed8796"
+maroon = "#ee99a0"
+peach = "#f5a97f"
+yellow = "#eed49f"
+green = "#a6da95"
+teal = "#8bd5ca"
+sky = "#91d7e3"
+sapphire = "#7dc4e4"
+blue = "#8aadf4"
+lavender = "#b7bdf8"
+text = "#cad3f5"
+subtext1 = "#b8c0e0"
+subtext0 = "#a5adcb"
+overlay2 = "#939ab7"
+overlay1 = "#8087a2"
+overlay0 = "#6e738d"
+surface2 = "#5b6078"
+surface1 = "#494d64"
+surface0 = "#363a4f"
+base = "#24273a"
+mantle = "#1e2030"
+crust = "#181926"
+
+[palettes.catppuccin_mocha]
+bg_os = "#cba6f7" # mauve
+fg_os = "#11111b" # crust
+bg_directory = "#b4befe" # lavender
+fg_directory = "#11111b" # crust
+bg_git = "#74c7ec" # sapphire
+fg_git = "#11111b" # crust
+bg_git_2 = "#89dceb" # sky
+fg_git_2 = "#11111b" # crust
+bg_lang = "#a6e3a1" # green
+fg_lang = "#11111b" # crust
+bg_duration = "#f9e2af" # yellow
+fg_duration = "#11111b" # crust
+bg_time = "#fab387" # peach
+fg_time = "#11111b" # crust
+bg_check = "#f38ba8" # red
+fg_check = "#11111b" # crust
+rosewater = "#f5e0dc"
+flamingo = "#f2cdcd"
+pink = "#f5c2e7"
+mauve = "#cba6f7"
+red = "#f38ba8"
+maroon = "#eba0ac"
+peach = "#fab387"
+yellow = "#f9e2af"
+green = "#a6e3a1"
+teal = "#94e2d5"
+sky = "#89dceb"
+sapphire = "#74c7ec"
+blue = "#89b4fa"
+lavender = "#b4befe"
+text = "#cdd6f4"
+subtext1 = "#bac2de"
+subtext0 = "#a6adc8"
+overlay2 = "#9399b2"
+overlay1 = "#7f849c"
+overlay0 = "#6c7086"
+surface2 = "#585b70"
+surface1 = "#45475a"
+surface0 = "#313244"
+base = "#1e1e2e"
+mantle = "#181825"
+crust = "#11111b"
