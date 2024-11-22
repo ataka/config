@@ -116,6 +116,14 @@ style = "bold fg:fg_git bg:bg_git"
 style = "bold fg:fg_git bg:bg_git"
 tag_symbol = '   '
 
+[git_state]
+format = '[ $state( $progress_current/$progress_total)]($style)'
+style = "bold fg:fg_git_2 bg:bg_git_2"
+rebase = " REBASING"
+merge = " MERGING"
+revert = " REVERTING"
+cherry_pick = " CHERRY_PICKING"
+
 [git_metrics]
 disabled = false
 format = '([ +$added ]($added_style))([-$deleted ]($deleted_style))'
