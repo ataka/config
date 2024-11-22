@@ -135,7 +135,13 @@ format = '([$ahead_behind$all_status ]($style))'
 ahead = '  ${count}'
 diverged = '   ${ahead_count}  ${behind_count}'
 behind = '  ${count}'
-stashed = '   ${count}'
+conflicted = ' 󰯇 ${count}'
+stashed = '  ${count}'
+deleted = '✘'
+renamed = '»'
+modified = '!'
+staged = '+'
+untracked = '?'
 style = "bold fg:fg_git_2 bg:bg_git_2"
 
 [lua]
