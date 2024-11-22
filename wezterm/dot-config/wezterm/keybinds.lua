@@ -21,6 +21,7 @@ return {
     { key = '|', mods = 'LEADER', action = act.SplitHorizontal{ domain = 'CurrentPaneDomain' } },
     { key = '-', mods = 'LEADER', action = act.SplitVertical{ domain = 'CurrentPaneDomain' } },
     { key = 'x', mods = 'LEADER', action = act({ CloseCurrentPane = { confirm = true } }) },
+    { key = '0', mods = 'LEADER', action = act({ CloseCurrentPane = { confirm = true } }) },
     { key = 'o', mods = 'LEADER', action = act.ActivatePaneDirection('Next') },
     { key = 'o', mods = 'LEADER|SHIFT', action = act.ActivatePaneDirection('Prev') },
     -- オリジナル設定
