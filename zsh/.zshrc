@@ -54,6 +54,10 @@ fi
 if [ "$TERM_PROGRAM" = "WezTerm" ]; then
   export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
   eval "$(starship init zsh)"
+
+  function wezterm-set-active-pane-title() {
+    echo "\x1b]1;$@"
+  }
 fi
 
 #
