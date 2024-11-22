@@ -92,13 +92,7 @@ wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_wid
   end
   local edge_foreground = background
 
-  local pane = tab.active_pane
-  local pane_id = pane.pane_id
-  local title_raw = pane.title:gsub("^zsh in ", "")
---  if title_cache[pane_id] then
---    title_raw = title_cache[pane_id]
---  end
-  local title = "   " .. wezterm.truncate_right(title_raw, max_width - 1) .. "   "
+  local title = "   " .. tab.tab_index .. ": " .. wezterm.truncate_right(tab.active_pane.title, max_width - 1) .. "   "
 
   return {
     { Background = { Color = edge_background } },
