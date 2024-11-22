@@ -5,6 +5,9 @@ local config = wezterm.config_builder()
 -- ホット・リロード
 config.automatically_reload_config = true
 
+-- 日本語入力 OK
+config.use_ime = true
+
 -- フォント
 -- config.font = wezterm.font("UDEV Gothic NFLG", {weight="Regular", stretch="Normal", style="Normal"})
 
