@@ -29,6 +29,7 @@ install-cui:
 	brew install git-delta
 	brew install screen
 	brew install starship
+	brew install tldr
 	brew install tmux
 	brew install tree
 	brew install zoxide
