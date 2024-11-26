@@ -1,4 +1,10 @@
-* ツールの設定
+* ツールの説明と設定
+
+** DeskPad
+
+- GitHub: https://github.com/Stengo/DeskPad
+
+画面共有用に仮想ディスプレイ (Virtual Display) を作るアプリ
 
 ** Emacs
 

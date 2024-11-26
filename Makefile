@@ -23,6 +23,7 @@ install-cui:
 	brew install --cask wezterm
 	brew install --formula jandedobbeleer/oh-my-posh/oh-my-posh
 	brew install bat
+	brew install deskpad
 	brew install eza
 	brew install fd
 	brew install fzf
