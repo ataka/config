@@ -10,7 +10,7 @@
 [interactive]
     diffFilter = delta --color-only
 [pull]
-	rebase = false
+	rebase = true
 [delta]
     features = line-numbers
     navigate = true
