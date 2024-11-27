@@ -103,6 +103,7 @@ read_only_style = "fg:fg_directory bg:bg_directory"
   [directory.substitutions]
   "Documents" = "󰈙  "
   "Downloads" = "  "
+  "Library" = "󱨢 "
   "Music" = "  "
   "Pictures" = "  "
   "Logseq" = "󱔘 "
