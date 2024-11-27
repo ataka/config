@@ -97,7 +97,8 @@ truncation_length = 6
 truncate_to_repo = false
 format = '[   $path ]($style)[$read_only]($read_only_style)'
 style = "bold fg:fg_directory bg:bg_directory"
-read_only = " 󰌾 "
+read_only = "󰌾  "
+read_only_style = "fg:fg_directory bg:bg_directory"
 
   [directory.substitutions]
   "Documents" = "󰈙  "
