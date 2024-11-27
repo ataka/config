@@ -120,6 +120,13 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # ==============================================================================
 
 #
+# Bat
+# ------------------------------------------------------------------------------
+if type bat &>/dev/null; then
+  export MANPAGER="sh -c 'col -bx | bat --language=man --style=plain'"
+fi
+
+#
 # Emacs
 # ------------------------------------------------------------------------------
 emacs_dir=$HOME/project/emacs-2024
