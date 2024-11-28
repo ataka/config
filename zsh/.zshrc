@@ -16,6 +16,20 @@ bindkey -e
 # ------------------------------------------------------------------------------
 
 #
+# History
+# ------------------------------------------------------------------------------
+export HISTFILE=${HOME}/.zsh_history
+export HISTSIZE=5000 # default 2000
+export SAVEHIST=$HISTSIZE
+export HISTDUP=erase
+setopt sharehistory
+setopt hist_ignore_space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
+
+#
 # Prompt
 # ==============================================================================
 export PS1="%~ $ "
