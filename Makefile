@@ -42,6 +42,7 @@ install-cui:
 .PHONY: install-programming
 install-programming: install-programming-bash
 	brew install lua
+	brew install node
 	brew install plantuml
 
 .PHONY: install-programming-bash
