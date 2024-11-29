@@ -111,7 +111,7 @@ read_only_style = "fg:fg_directory bg:bg_directory"
 
 [git_branch]
 format = '[ $symbol$branch(:$remote_branch) ]($style)'
-symbol = '󰊤    '
+symbol = '󰊤   '
 style = "bold fg:fg_git bg:bg_git"
 
 [git_commit]
@@ -154,15 +154,15 @@ symbol = " "
 [ruby]
 format = '[$symbol($version )]($style)'
 style = 'fg:fg_lang bg:bg_lang'
-symbol = "   "
+symbol = "  "
 
 [swift]
 format = '[$symbol($version )]($style)'
 style = 'fg:fg_lang bg:bg_lang'
-symbol = "   "
+symbol = "  "
 
 [cmd_duration]
-format = '[ $duration 󱦟  ]($style)'
+format = '[ $duration 󱦟 ]($style)'
 style = 'fg:fg_duration bg:bg_duration'
 
 [time]

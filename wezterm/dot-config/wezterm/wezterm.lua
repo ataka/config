@@ -13,7 +13,7 @@ config.use_ime = true
 
 config.font = wezterm.font_with_fallback {
   {
-    family = 'UDEV Gothic LG',
+    family = 'UDEV Gothic NFLG',
     weight = 'Regular',
     stretch = "Normal",
     style = "Normal",
