@@ -115,6 +115,7 @@ symbol = '󰊤   '
 style = "bold fg:fg_git bg:bg_git"
 
 [git_commit]
+format = '[\($hash$tag\) ]($style)'
 style = "bold fg:fg_git bg:bg_git"
 tag_symbol = '   '
 
