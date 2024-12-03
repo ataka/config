@@ -28,6 +28,7 @@ install-cui:
 	brew install fd
 	brew install fzf
 	brew install git-delta
+	brew install nushell
 	brew install screen
 	brew install starship
 	brew install tldr
