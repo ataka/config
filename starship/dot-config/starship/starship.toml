@@ -31,6 +31,8 @@ $line_break\
 $character\
 """
 
+continuation_prompt = '❯ ❯ '
+
 palette = "catppuccin_frappe"
 
 [palettes.wang]
