@@ -3,6 +3,7 @@
 format="""
 [](fg:bg_os)\
 $os\
+$shell\
 [](fg:bg_os bg:bg_directory)\
 $directory\
 [](fg:bg_directory bg:bg_git)\
@@ -91,6 +92,14 @@ style = "fg:fg_os bg:bg_os"
   Unknown = "  "
   Void = "  "
   Windows = "󰍲  "
+
+[shell]
+disabled = false
+format = '[$indicator]($style)'
+style = "fg:fg_os bg:bg_os"
+bash_indicator = "bash "
+zsh_indicator = ""
+nu_indicator = "nu "
 
 [directory]
 truncation_length = 6
