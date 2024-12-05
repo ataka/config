@@ -41,11 +41,15 @@ install-cui:
 	brew install zsh-syntax-highlighting
 
 .PHONY: install-programming
-install-programming: install-programming-bash
-	brew install lua
+install-programming: install-programming-bash install-programming-lua
 	brew install node
 	brew install plantuml
 
 .PHONY: install-programming-bash
 install-programming-bash:
 	brew install bash-language-server
+
+.PHONE: install-programming-lua
+install-programming-lua:
+	brew install lua
+	brew install lua-language-server
