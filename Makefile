@@ -16,7 +16,8 @@ setup:
 # ============================================================
 
 .PHONY: install
-install: install-cui install-programming
+install: install-cui install-font install-programming
+
 
 .PHONE: install-cui
 install-cui:
@@ -40,6 +41,10 @@ install-cui:
 	brew install zsh-autosuggestions
 	brew install zsh-completion
 	brew install zsh-syntax-highlighting
+
+.PHONY: install-font
+install-font:
+	brew install --cask font-jetbrains-mono-nerd-font
 
 .PHONY: install-programming
 install-programming: install-programming-bash install-programming-lua
