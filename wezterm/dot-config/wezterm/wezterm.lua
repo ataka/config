@@ -8,6 +8,9 @@ config.automatically_reload_config = true
 -- 日本語入力 OK
 config.use_ime = true
 
+-- FPS (Default: 60)
+config.max_fps = 120
+
 -- フォント
 -- config.font = wezterm.font("UDEV Gothic NFLG", {weight="Regular", stretch="Normal", style="Normal"})
 
