@@ -72,21 +72,6 @@ local SOLID_LEFT_ARROW = wezterm.nerdfonts.ple_lower_right_triangle
 -- タブの右側の装飾
 local SOLID_RIGHT_ARROW = wezterm.nerdfonts.ple_upper_left_triangle
 
-local title_cache = {}
-
-local function get_cwd_name(pane)
-  local cwd_uri = pane:get_current_working_dir()
-  local cwd_uri_string = wezterm.to_string(cwd_uri)
-  local cwd_full = cwd_uri_string:gsub("^file://", "")
-  local cwd = cwd_full.match("^.*/(.*)$")
-  return cwd
-end
-
-wezterm.on("update-status", function(window, pane)
-  local title = get_cwd_name(pane)
-  local pane_id = pane:pane_id()
-  title_cache[pane_id] = title
-end)
 
 wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
   local background = "#5c6d74"
