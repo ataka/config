@@ -47,7 +47,7 @@ install-font:
 	brew install --cask font-jetbrains-mono-nerd-font
 
 .PHONY: install-programming
-install-programming: install-programming-bash install-programming-lua
+install-programming: install-programming-bash install-programming-lua install-programming-markdown
 	brew install node
 	brew install plantuml
 
@@ -59,3 +59,7 @@ install-programming-bash:
 install-programming-lua:
 	brew install lua
 	brew install lua-language-server
+
+.PHONY: install-programming-markdown
+install-programming-markdown:
+	brew install markdown
