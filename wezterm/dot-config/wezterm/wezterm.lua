@@ -26,9 +26,12 @@ config.font = wezterm.font_with_fallback {
 
 config.font_size = 12.0
 
+-- テーマ
+config.color_scheme = 'Catppuccin Frappe'
+
 -- 背景の透過
-config.window_background_opacity = 0.85
-config.macos_window_background_blur = 10
+config.window_background_opacity = 0.90
+config.macos_window_background_blur = 5
 
 -- タブバー
 -- タイトルバーを非表示
@@ -70,16 +73,15 @@ config.colors = {
 -- タブの左側の装飾
 local SOLID_LEFT_ARROW = wezterm.nerdfonts.ple_lower_right_triangle
 -- タブの右側の装飾
-local SOLID_RIGHT_ARROW = wezterm.nerdfonts.ple_upper_left_triangle
-
+local SOLID_RIGHT_ARROW = wezterm.nerdfonts.ple_lower_left_triangle
 
 wezterm.on("format-tab-title", function(tab, tabs, panes, config, hover, max_width)
-  local background = "#5c6d74"
-  local foreground = "#FFFFFF"
+  local background = "#414559" -- catppuccin.frappe.surface0
+  local foreground = "#c6d0f5" -- catppuccin.frappe.text
   local edge_background = "none"
   if tab.is_active then
-    background = "#ae8b2d"
-    foreground = "#FFFFFF"
+    background = "#e5c890" -- catppuccin.frappe.yellow
+    foreground = "#232634" -- catppuccin.frappe.crust
   end
   local edge_foreground = background
 
