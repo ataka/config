@@ -26,6 +26,23 @@ Better =ls=
   brew install eza
 #+end_src
 
+** Fontforge
+
+フォントを編集するアプリ。
+
+ARM 用のアプリは提供されていない?
+`brew` でインストールすると、次の警告が出ます。
+
+#+begin_src
+  ==> Caveats
+  fontforge is built for Intel macOS and so requires Rosetta 2 to be installed.
+  You can install Rosetta 2 with:
+    softwareupdate --install-rosetta --agree-to-license
+  Note that it is very difficult to remove Rosetta 2 once it is installed.
+#+end_src
+
+幸い手元の環境は既に Rosetta 2 だったのでそのままスルーします。
+
 ** fzf
 
 =zoxide= との連携で力を発揮する Fazzy Finder

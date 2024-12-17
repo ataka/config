@@ -21,6 +21,7 @@ install: install-cui install-font install-programming
 
 .PHONE: install-cui
 install-cui:
+	brew install --cask fontforge
 	brew install --cask karabiner-elements
 	brew install --cask wezterm
 	brew install --formula jandedobbeleer/oh-my-posh/oh-my-posh
