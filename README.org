@@ -65,6 +65,16 @@ ARM 用のアプリは提供されていない?
   ;   q   j   k   x      b   m   w   v   ]
 #+end_src
 
+*** Home Row Mods
+
+Home Row Mods の設定は https://github.com/Leo-keeb/Karabiner-Elements-Advanced-Settings を参考にしました。
+
+#+begin_src
+  '   ,   .   p   y      f   g   c   r   l
+  Cmd Sft Opt Ctl i      d   Ctl Opt Sft Cmd
+  ;   q   j   k   x      b   m   w   v   ]
+#+end_src
+
 ** GNU Screen
 
 - =.screenrc=
