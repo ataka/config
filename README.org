@@ -55,6 +55,16 @@ ARM 用のアプリは提供されていない?
 
 - =.gitconfig=
 
+** Karabiner Elements
+
+*** Dvorak Layout
+
+#+begin_src
+  '   ,   .   p   y      f   g   c   r   l
+  a   o   e   u   u      d   h   t   n   s
+  ;   q   j   k   x      b   m   w   v   ]
+#+end_src
+
 ** GNU Screen
 
 - =.screenrc=
