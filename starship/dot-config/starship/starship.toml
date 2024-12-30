@@ -99,9 +99,9 @@ style = "fg:fg_os bg:bg_os"
 disabled = false
 format = '[$indicator]($style)'
 style = "fg:fg_os bg:bg_os"
-bash_indicator = "bash "
+bash_indicator = " "
 zsh_indicator = ""
-nu_indicator = "nu "
+nu_indicator = " "
 
 [directory]
 truncation_length = 6
