@@ -23,9 +23,8 @@ return {
     { key = 'PageUp', mods = 'CTRL', action = act.MoveTabRelative(-1) },
     { key = 'PageDown', mods = 'CTRL', action = act.MoveTabRelative(1) },
     -- Pane
-    { key = '|', mods = 'LEADER', action = act.SplitHorizontal{ domain = 'CurrentPaneDomain' } },
-    { key = '-', mods = 'LEADER', action = act.SplitVertical{ domain = 'CurrentPaneDomain' } },
-    { key = 'x', mods = 'LEADER', action = act({ CloseCurrentPane = { confirm = true } }) },
+    { key = '3', mods = 'LEADER', action = act.SplitHorizontal{ domain = 'CurrentPaneDomain' } },
+    { key = '2', mods = 'LEADER', action = act.SplitVertical{ domain = 'CurrentPaneDomain' } },
     { key = '0', mods = 'LEADER', action = act({ CloseCurrentPane = { confirm = true } }) },
     { key = 'o', mods = 'LEADER', action = act.ActivatePaneDirection('Next') },
     { key = 'O', mods = 'LEADER', action = act.ActivatePaneDirection('Prev') },
