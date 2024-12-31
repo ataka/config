@@ -16,16 +16,18 @@ setup:
 # ============================================================
 
 .PHONY: install
-install: install-cui install-font install-programming
+install: install-pre install-cui install-font install-programming
 
+.PHONY: install-pre
+install-pre:
+	brew install wget
 
 .PHONE: install-cui
-install-cui:
+install-cui: install-bat
 	brew install --cask fontforge
 	brew install --cask karabiner-elements
 	brew install --cask wezterm
 	brew install --formula jandedobbeleer/oh-my-posh/oh-my-posh
-	brew install bat
 	brew install deskpad
 	brew install eza
 	brew install fd
@@ -42,6 +44,18 @@ install-cui:
 	brew install zsh-autosuggestions
 	brew install zsh-completion
 	brew install zsh-syntax-highlighting
+
+.PHONY: install-bat
+bat_config_dir := ./bat/dot-config/bat/themes
+install-bat:
+	brew install bat
+	if [ ! -f "$(bat_config_dir)/Catppuccin Latte.tmTheme" ]; then\
+	  mkdir -p $(bat_config_dir); \
+	  wget -P $(bat_config_dir) https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Latte.tmTheme     ;\
+	  wget -P $(bat_config_dir) https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Frappe.tmTheme    ;\
+	  wget -P $(bat_config_dir) https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Macchiato.tmTheme ;\
+	  wget -P $(bat_config_dir) https://github.com/catppuccin/bat/raw/main/themes/Catppuccin%20Mocha.tmTheme     ;\
+	fi
 
 .PHONY: install-font
 install-font:

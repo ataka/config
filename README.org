@@ -1,4 +1,15 @@
+
 * ツールの説明と設定
+
+** Bat
+
+better =cat=
+
+*** Theme
+
+- [catppuccin/bat: 🦇️ Soothing pastel theme for Bat](https://github.com/catppuccin/bat)
+
+Theme には Catppuccin Frappe を使用しています。
 
 ** DeskPad
 
