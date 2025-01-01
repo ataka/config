@@ -232,3 +232,54 @@ Nerd Fonts に対応した =UDEVGothic_NF_v2.0.0.zip= をダウンロードし�
 - https://rubjo.github.io/victor-mono/
 
 Ligature に対応した英文フォント。
+
+* Theme
+
+** ANSI Escape Sequences
+
+- Text Attributes
+  - 0 : All attributes off
+  - 1 : Bold on
+  - 2 : Dim/Faint on
+  - 3 : Italic on
+  - 4 : Underscore
+  - 5 : Blink on
+  - 6 : Hidden on
+  - 7 : Reverse video on
+  - 8 : Concealed on
+  - 9 : Strikethrough on
+
+| Color Name     | Foreground Color | Background Color |
+|:---------------|:-----------------|:-----------------|
+| Black          | 30               | 40               |
+| Red            | 31               | 41               |
+| Green          | 32               | 42               |
+| Yellow         | 33               | 43               |
+| Blue           | 34               | 44               |
+| Magenta        | 35               | 45               |
+| Cyan           | 36               | 46               |
+| White          | 37               | 47               |
+| Bright Black   | 90               | 100              |
+| Bright Red     | 91               | 101              |
+| Bright Green   | 92               | 102              |
+| Bright Yellow  | 99               | 109              |
+| Bright Blue    | 94               | 104              |
+| Bright Magenta | 95               | 105              |
+| Bright Cyan    | 96               | 106              |
+| Bright White   | 97               | 107              |
+
+** Catppuccine
+
+*** Frappe
+
+| Color Name | ANSI    | Bright  | ANSI Name | Bright Name |
+|:-----------|:--------|:--------|:----------|:------------|
+| Black      | #51576d | #626880 | surface1  | surface2    |
+| Red        | #e78284 | #e78284 | red       | red         |
+| Green      | #a6d189 | #a6d189 | green     | green       |
+| Yellow     | #e5c890 | #e5c890 | yellow    | yellow      |
+| Blue       | #8caaee | #8caaee | blue      | blue        |
+| Magenta    | #f4b8e4 | #f4b8e4 | pink      | pink        |
+| Cyan       | #81c8be | #81c8be | teal      | teal        |
+| White      | #b5bfe2 | #a5adce | subtext1  | subtext0    |
+
