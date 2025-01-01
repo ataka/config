@@ -111,6 +111,13 @@ Home Row Mods の設定は https://github.com/Leo-keeb/Karabiner-Elements-Advanc
 - =Cmd + T= タブを新しく作る
 - =Cmd + W= タブを閉じる
 
+*** Theme
+
+Catppuccin Frappe テーマを使用しています。
+
+Wezterm はシステムのライト/ダークテーマの切替に対応していますが、その機能を利用していません。
+Wezterm 上で使う CUI ツールが対応していないためです。
+
 ** zoxide
 
 Better =cd=
