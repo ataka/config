@@ -353,3 +353,11 @@ shift-7 = 'move-node-to-workspace 7'
 [[on-window-detected]]
   if.app-id = 'com.loupedeck.loupedeckApp'
   run = 'move-node-to-workspace 5'
+
+[[on-window-detected]]
+  if.app-id = 'com.stengo.DeskPad'
+  run = 'layout floating'
+
+[[on-window-detected]]
+  if.app-id = 'us.zoom.xos'
+  run = 'layout floating'
