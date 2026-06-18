@@ -31,6 +31,21 @@ sync:
 	cp -p ~/Library/Containers/net.sonuscape.mouseless/Data/.mouseless/configs/config.yaml mouseless/config.yaml
 
 #
+# Trust
+# ============================================================
+
+.PHONY: trust
+trust:
+	brew trust --cask nikitabobko/tap/aerospace
+	brew trust --formula FelixKratz/formulae/borders
+	brew trust --formula FelixKratz/formulae/sketchybar
+	brew trust --formula jandedobbeleer/oh-my-posh/oh-my-posh
+	brew trust --formula lusingander/tap/serie
+	brew trust --formula olets/tap/zsh-abbr
+	brew trust --formula FelixHerrmann/tap/swift-package-listn
+	brew trust --formula laishulu/homebrew/macism
+
+#
 # Install
 # ============================================================
 
